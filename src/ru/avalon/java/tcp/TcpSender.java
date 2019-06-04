@@ -1,11 +1,6 @@
 package ru.avalon.java.tcp;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
 
@@ -35,12 +30,11 @@ public final class TcpSender {
      *
      * @return текстовое сообщение.
      */
-    private static String prepareMessage()throws IOException{
+    private static String prepareMessage() {
         /*
          * TODO Реализовать метод prepareMessage класса TcpSender
          */
-        return new BufferedReader (new InputStreamReader(System.in)).readLine();
-        
+        throw new UnsupportedOperationException("Not implemented yet!");
     }
 
     /**
@@ -52,8 +46,7 @@ public final class TcpSender {
         /*
          * TODO Реализовать метод prepareAddress класса TcpSender
          */
-        return new InetSocketAddress("localhost", 8080);
-        
+        throw new UnsupportedOperationException("Not implemented yet!");
     }
 
     /**
@@ -70,11 +63,7 @@ public final class TcpSender {
         /*
          * TODO Реализовать метод connect класса TcpSender
          */
-        try (Socket socket = new Socket()){
-             socket.connect(address);
-           return socket;
-        }
-       
+        throw new UnsupportedOperationException("Not implemented yet!");
     }
 
     /**
@@ -89,20 +78,7 @@ public final class TcpSender {
         /*
          * TODO Реализовать метод send класса TcpSender
          */
-//        if (true){
-//        OutputStream stream =socket.getOutputStream();
-//        PrintWriter = new PrintWriter(stream);
-//        writer.println(message);
-//        writer.flush();
-        
-        byte[] data = message.getBytes();
-        try {
-            OutputStream stream = socket.getOutputStream();
-            stream.write(data);
-            stream.flush();
-        } catch (IOException ex) {
-            ex.printStackTrace(System.err);
-       }  
+        throw new UnsupportedOperationException("Not implemented yet!");
     }
 
 }

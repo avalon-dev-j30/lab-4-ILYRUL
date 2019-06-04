@@ -3,7 +3,6 @@ package ru.avalon.java.udp;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.SocketException;
 
 /**
  * Упражнение, на правленное на выработку умений, связанных с полученеим
@@ -39,8 +38,7 @@ public final class UdpReceiver {
         /*
          * TODO Реализовать метод prepareBuffer класса UdpReceiver
          */
-        return new byte[512];
-        
+        throw new UnsupportedOperationException("Not implemented yet!");
     }
 
     /**
@@ -56,8 +54,7 @@ public final class UdpReceiver {
         /*
          * TODO Реализовать метод preparePacket класса UdpReceiver
          */
-        return new DatagramPacket(buffer, buffer.length);
-        
+        throw new UnsupportedOperationException("Not implemented yet!");
     }
 
     /**
@@ -67,15 +64,11 @@ public final class UdpReceiver {
      *
      * @return сокет.
      */
-    private static DatagramSocket prepareSocket(int port) throws SocketException{
+    private static DatagramSocket prepareSocket(int port) {
         /*
          * TODO Реализовать метод prepareSocket класса UdpReceiver
          */
-        try (DatagramSocket socket = new DatagramSocket(port)){
-            return socket;
-            
-        }
-        
+        throw new UnsupportedOperationException("Not implemented yet!");
     }
 
     /**
@@ -90,10 +83,7 @@ public final class UdpReceiver {
         /*
          * TODO Реализовать метод getMessage класса UdpReceiver
          */
-       String result = new String(packet.getData(),0,packet.getLength());
-        System.out.println(result);
-        return result;
-        
+        throw new UnsupportedOperationException("Not implemented yet!");
     }
 
 }
